@@ -12,4 +12,9 @@ class CartProvider extends ChangeNotifier {
     cart.remove(product);
     notifyListeners();
   }
+
+  void clearCart() {
+    cart.clear();
+    notifyListeners();
+  }
 }

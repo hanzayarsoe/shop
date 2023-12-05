@@ -35,9 +35,11 @@ class ProductCard extends StatelessWidget {
           '\$ ${price.toString()}',
           style: Theme.of(context).textTheme.bodySmall,
         ),
-        Image.asset(
-          image,
-          height: 250,
+        Center(
+          child: Image.asset(
+            image,
+            height: 175,
+          ),
         ),
       ]),
     );

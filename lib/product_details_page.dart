@@ -24,12 +24,22 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
         'id': widget.product['id'],
         'size': selectedSize
       });
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('Product added to cart successfully'),
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(
+          'Product added to cart successfully',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
       ));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('Please select a size'),
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(
+          'Please select a size',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
       ));
     }
   }
@@ -51,7 +61,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           Text(widget.product['title'],
               style: Theme.of(context).textTheme.titleLarge),
           const Spacer(),
-          Image.asset(widget.product['imageUrl']),
+          Image.asset(
+            widget.product['imageUrl'],
+            height: 300,
+          ),
           const Spacer(),
           Container(
             height: 200,
@@ -93,7 +106,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       }),
                 ),
                 SizedBox(
-                  width: double.infinity,
+                  width: MediaQuery.of(context).size.width * 2 / 3,
                   child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: ElevatedButton.icon(
