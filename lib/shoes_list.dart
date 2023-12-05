@@ -79,7 +79,7 @@ class _ShoesListPageState extends State<ShoesListPage> {
                           color: Color.fromARGB(141, 255, 82, 82),
                         ),
                       ),
-                      hintText: 'Search',
+                      hintText: 'Search by brand name',
                       prefixIcon: const Icon(Icons.search),
                       suffixIcon: searchController.text.isNotEmpty
                           ? IconButton(
